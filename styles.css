@@ -1,0 +1,73 @@
+html, body, .Main {
+  margin: 0;
+  padding: 0;
+
+  height: 100%;
+  width: 100%;
+
+  font-family: 'Myraid Pro', Helvetica, serif;
+  color: white;
+}
+
+h1 {
+  font-size: 300%;
+  text-transform: uppercase;
+}
+
+a {
+  color: white;
+}
+
+.Page {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 1em;
+}
+
+.MainPage {
+  background: #0ac2d2;
+}
+
+.AboutPage {
+  background: #60d7a9;
+}
+
+.moveUp-enter {
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: 400px;
+
+  opacity: 0.01;
+  z-index: 1000;
+
+  transition-duration: .5s;
+  transition-property: opacity, top;
+  transition-timing-function: ease;
+}
+
+.moveUp-enter.moveUp-enter-active {
+  opacity: 1;
+  top: 0;
+}
+
+.moveUp-leave {
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+
+  top: 0;
+  bottom: 0;
+
+  height: 10000px;
+  opacity: 1;
+
+  transition-duration: .5s;
+  transition-property: top;
+  transition-timing-function: ease;
+}
+
+.moveUp-leave.moveUp-leave-active {
+  top: -400px;
+}
