@@ -7,6 +7,7 @@ html, body, .Main {
 
   font-family: 'Myraid Pro', Helvetica, serif;
   color: white;
+  overflow: hidden;
 }
 
 h1 {
@@ -18,10 +19,25 @@ a {
   color: white;
 }
 
+code {
+  font-size: 90%;
+  padding: 0 0.2em;
+}
+pre, code {
+  font-family: Menlo, Monaco, monospace;
+}
+pre {
+  margin: 2em 2em;
+}
+
 .Page {
   position: relative;
   height: 100%;
   width: 100%;
+  overflow: auto;
+}
+
+.Page__wrapper {
   padding: 1em;
 }
 
@@ -35,39 +51,29 @@ a {
 
 .moveUp-enter {
   position: absolute;
-  overflow: hidden;
-  left: 0;
-  top: 400px;
 
-  opacity: 0.01;
-  z-index: 1000;
-
-  transition-duration: .5s;
-  transition-property: opacity, top;
-  transition-timing-function: ease;
+  transition-duration: .3s;
+  transition-property: -webkit-transform, opacity;
+  transition-timing-function: ease-out;
+  -webkit-transform: translate3d(0,100%,0);
+  z-index: 10000;
 }
 
 .moveUp-enter.moveUp-enter-active {
-  opacity: 1;
-  top: 0;
+  -webkit-transform: translate3d(0,0,0);
 }
 
 .moveUp-leave {
   position: absolute;
-  overflow: hidden;
-  left: 0;
 
-  top: 0;
-  bottom: 0;
-
-  height: 10000px;
+  transition-duration: .3s;
+  transition-property: -webkit-transform, opacity;
+  transition-timing-function: ease-out;
+  -webkit-transform: translate3d(0,0,0);
   opacity: 1;
-
-  transition-duration: .5s;
-  transition-property: top;
-  transition-timing-function: ease;
 }
 
 .moveUp-leave.moveUp-leave-active {
-  top: -400px;
+  -webkit-transform: translate3d(0,-15%,0);
+  opacity: 0.3;
 }
