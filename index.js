@@ -2,17 +2,31 @@
  * @jsx React.DOM
  */
 
-var React     = require('react')
-var Router    = require('react-router-component')
-var Location  = Router.Location;
-var Link      = Router.Link;
+var React           = require('react')
+var TransitionGroup = require('react/lib/ReactCSSTransitionGroup');
+var Router          = require('react-router-component')
+var Locations       = Router.Locations;
+var Location        = Router.Location;
+var Link            = Router.Link;
 
-var AnimatedLocations = require('./AnimatedLocations')
+var AnimatedLocations = React.createClass({
+
+    mixins: [Router.RouterMixin, Router.AsyncRouteRenderingMixin],
+
+    getRoutes: function() {
+      return this.props.children;
+    },
+
+    render: function() {
+      var handler = this.renderRouteHandler();
+      return this.transferPropsTo(TransitionGroup({component: React.DOM.div}, handler));
+    }
+});
 
 var App = React.createClass({
   render: function() {
     return (
-      <AnimatedLocations className="Main" transitionName="moveUp">
+      <AnimatedLocations hash className="Main" transitionName="moveUp">
         <Location path="/" handler={MainPage} />
         <Location path="/about" handler={AboutPage} />
       </AnimatedLocations>
