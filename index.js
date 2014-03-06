@@ -19,7 +19,21 @@ var AnimatedLocations = React.createClass({
 
     render: function() {
       var handler = this.renderRouteHandler();
-      return this.transferPropsTo(TransitionGroup({component: React.DOM.div}, handler));
+      var isPopState = this.state.navigation.isPopState;
+      var enabled = isPopState ?
+                    !!this.props.popStateTransitionName :
+                    !this.state.navigation.noTransition;
+      var props = {
+        component: React.DOM.div,
+        transitionEnter: enabled,
+        transitionLeave: enabled,
+      };
+      if (isPopState && this.props.popStateTransitionName) {
+        props.transitionName = this.props.popStateTransitionName;
+      } else if (this.state.navigation.transitionName) {
+        props.transitionName = this.state.navigation.transitionName;
+      }
+      return this.transferPropsTo(TransitionGroup(props, handler));
     }
 });
 
@@ -86,7 +100,14 @@ var AboutPage = React.createClass({
             '  ...',
             '}',
           ].join('\n')}</pre>
-          Go back to <Link href="/">main page</Link>.
+          <p>
+            Go back to <Link transitionName="moveDown" href="/">main page
+            </Link> (please notice it uses another kind of animated transition).
+          </p>
+          <p>
+            This link will lead to <Link noTransition transitionName="moveDown" href="/">main page
+            </Link> too but with no animated transition.
+          </p>
         </div>
       </div>
     )
