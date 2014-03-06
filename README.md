@@ -7,6 +7,3 @@ ReactCSSTranstionGroup.
     % npm install
     % npm run build
     % open index.html
-
-See AnimatedLocations.js for router implementation and index.js for example
-code.
