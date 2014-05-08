@@ -2,12 +2,11 @@
  * @jsx React.DOM
  */
 
-var React           = require('react')
-var TransitionGroup = require('react/lib/ReactCSSTransitionGroup');
-var Router          = require('react-router-component')
-var Locations       = Router.Locations;
-var Location        = Router.Location;
-var Link            = Router.Link;
+var React              = require('react/addons');
+var CSSTransitionGroup = React.addons.CSSTransitionGroup;
+var Router             = require('react-router-component');
+var Location           = Router.Location;
+var Link               = Router.Link;
 
 var AnimatedLocations = React.createClass({
 
@@ -18,6 +17,7 @@ var AnimatedLocations = React.createClass({
     },
 
     render: function() {
+
       var handler = this.renderRouteHandler();
       var isPopState = this.state.navigation.isPopState;
       var enabled = isPopState ?
@@ -33,7 +33,10 @@ var AnimatedLocations = React.createClass({
       } else if (this.state.navigation.transitionName) {
         props.transitionName = this.state.navigation.transitionName;
       }
-      return this.transferPropsTo(TransitionGroup(props, handler));
+
+      handler.props.key = this.state.match.path;
+      return this.transferPropsTo(CSSTransitionGroup(props, handler));
+
     }
 });
 
