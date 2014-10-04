@@ -1,7 +1,7 @@
 # react-router-page-transition
 
 Example code for router which does animated page transitions using
-ReactCSSTranstionGroup.
+ReactCSSTransitionGroup.
 
     % git clone https://github.com/andreypopp/react-router-page-transition.git
     % npm install
