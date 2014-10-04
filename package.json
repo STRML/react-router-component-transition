@@ -4,14 +4,14 @@
   "description": "Demo for React + React Router component + page transitions",
   "main": "index.js",
   "dependencies": {
-    "browserify": "~3.30.2",
-    "envify": "~1.2.1",
-    "reactify": "~0.8.1",
-    "uglifyjs": "^2.3.6",
-    "watchify": "^0.6.1",
-    "react": "~0.10.0",
-    "react-async": "~0.9.2",
-    "react-router-component": "~0.18.2"
+    "browserify": "~6.0.2",
+    "envify": "~3.0.0",
+    "reactify": "~0.14.0",
+    "uglifyjs": "~2.3.6",
+    "watchify": "~1.0.6",
+    "react": "~0.11.2",
+    "react-async": "~1.0.2",
+    "react-router-component": "~0.21.2"
   },
   "devDependencies": {},
   "scripts": {

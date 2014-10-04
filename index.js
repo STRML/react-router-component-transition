@@ -43,7 +43,7 @@ var AnimatedLocations = React.createClass({
 var App = React.createClass({
   render: function() {
     return (
-      <AnimatedLocations hash className="Main" transitionName="moveUp">
+      <AnimatedLocations hash className="Main" transitionName="moveUp" popStateTransitionName="fade">
         <Location path="/" handler={MainPage} />
         <Location path="/about" handler={AboutPage} />
       </AnimatedLocations>
@@ -65,7 +65,7 @@ var MainPage = React.createClass({
             All you need is to use <code>AnimatedLocations</code> router:
           </p>
           <pre>{[
-            '<AnimatedLocations className="Main" transitionName="moveUp">',
+            '<AnimatedLocations className="Main" transitionName="moveUp" popStateTransitionName="fade">',
             '  <Location path="/" handler={MainPage} />',
             '  <Location path="/about" handler={AboutPage} />',
             '</AnimatedLocations>'
@@ -110,6 +110,11 @@ var AboutPage = React.createClass({
           <p>
             This link will lead to <Link noTransition transitionName="moveDown" href="/">main page
             </Link> too but with no animated transition.
+          </p>
+          <p>
+            You can also use the back/forward buttons in your browser. <br />
+            Back/forward actions will use the <code>popStateTransitionName</code> specified in the props. <br />
+            It is set to a fade transition in this demo. If none is specified, no animation will be used.
           </p>
         </div>
       </div>
