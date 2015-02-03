@@ -53,28 +53,28 @@ pre {
   position: absolute;
 
   transition-duration: .3s;
-  transition-property: -webkit-transform, opacity;
+  transition-property: transform, opacity;
   transition-timing-function: ease-out;
-  -webkit-transform: translate3d(0,100%,0);
+  transform: translate3d(0,100%,0);
   z-index: 10000;
 }
 
 .moveUp-enter.moveUp-enter-active {
-  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
 }
 
 .moveUp-leave {
   position: absolute;
 
   transition-duration: .3s;
-  transition-property: -webkit-transform, opacity;
+  transition-property: transform, opacity;
   transition-timing-function: ease-out;
-  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
   opacity: 1;
 }
 
 .moveUp-leave.moveUp-leave-active {
-  -webkit-transform: translate3d(0,-15%,0);
+  transform: translate3d(0,-15%,0);
   opacity: 0.3;
 }
 
@@ -82,28 +82,28 @@ pre {
   position: absolute;
 
   transition-duration: .3s;
-  transition-property: -webkit-transform, opacity;
+  transition-property: transform, opacity;
   transition-timing-function: ease-out;
-  -webkit-transform: translate3d(0,-100%,0);
+  transform: translate3d(0,-100%,0);
   z-index: 10000;
 }
 
 .moveDown-enter.moveDown-enter-active {
-  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
 }
 
 .moveDown-leave {
   position: absolute;
 
   transition-duration: .3s;
-  transition-property: -webkit-transform, opacity;
+  transition-property: transform, opacity;
   transition-timing-function: ease-out;
-  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
   opacity: 1;
 }
 
 .moveDown-leave.moveDown-leave-active {
-  -webkit-transform: translate3d(0,15%,0);
+  transform: translate3d(0,15%,0);
   opacity: 0.3;
 }
 
