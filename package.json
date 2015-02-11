@@ -7,7 +7,7 @@
     "browserify": "~6.0.2",
     "envify": "~3.0.0",
     "reactify": "~0.14.0",
-    "uglifyjs": "~2.3.6",
+    "uglify-js": "~2.3.6",
     "watchify": "~1.0.6",
     "react": "~0.11.2",
     "react-async": "~1.0.2",
