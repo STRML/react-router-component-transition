@@ -1,23 +1,23 @@
 {
   "name": "react-router-page-transition",
-  "version": "0.0.0",
-  "description": "Demo for React + React Router component + page transitions",
+  "version": "0.0.1",
+  "description": "Demo and component for React + React Router component + page transitions",
   "main": "index.js",
-  "dependencies": {
-    "browserify": "~6.0.2",
-    "envify": "~3.0.0",
-    "reactify": "~0.14.0",
-    "uglify-js": "~2.3.6",
-    "watchify": "~1.0.6",
-    "react": "~0.11.2",
-    "react-async": "~1.0.2",
-    "react-router-component": "~0.22.0"
+  "devDependencies": {
+    "browserify": "~10.2.4",
+    "envify": "~3.4.0",
+    "reactify": "~1.1.1",
+    "uglify-js": "~2.4.10",
+    "watchify": "~3.2.3"
   },
-  "devDependencies": {},
+  "peerDependencies": {
+    "react-router-component": ">0.20 < 0.26",
+    "react": ">=0.12.0 <0.14.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify -t reactify ./index.js | uglifyjs -cm > bundle.js ",
-    "develop": "watchify -d -t reactify ./index.js -o  bundle.js "
+    "build": "browserify -t reactify ./demo.js | uglifyjs -cm > bundle.js ",
+    "develop": "watchify -d -t reactify ./demo.js -o  bundle.js "
   },
   "repository": {
     "type": "git",
@@ -28,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/andreypop/react-router-page-transition/issues"
   },
-  "homepage": "https://github.com/andreypop/react-router-page-transition"
+  "homepage": "https://github.com/andreypop/react-router-page-transition",
+  "dependencies": {
+    "object.assign": "^3.0.1"
+  }
 }
