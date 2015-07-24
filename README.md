@@ -1,4 +1,4 @@
-### React-Router-Component-Transition (<AnimatedLocations>)
+### React-Router-Component-Transition
 
 A simple component that overrides `<Locations>` in [React-Router-Component](https://github.com/STRML/react-router-component)
 to animate page transitions.
