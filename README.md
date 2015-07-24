@@ -1,12 +1,19 @@
-### AnimatedLocations (React-Router-Component)
+### React-Router-Component-Transition (<AnimatedLocations>)
 
 A simple component that overrides `<Locations>` in [React-Router-Component](https://github.com/STRML/react-router-component)
 to animate page transitions.
 
-[View the Demo](https://andreypopp.github.io/react-router-page-transition/)
+[View the Demo](https://strml.github.io/react-router-page-transition/)
 
-This is not yet published as an npm module and is more of a proof of concept. If you want to use it via npm,
-use a github URL.
+#### Install
+
+```
+npm install react-router-component-transition
+```
+
+```javascript
+var AnimatedLocations = require('react-router-component-transition');
+```
 
 #### Usage
 
@@ -23,7 +30,7 @@ View the [demo source](demo.js) for more usage details.
 
 To run the demo locally and tinker:
 
-    % git clone https://github.com/andreypopp/react-router-page-transition.git
+    % git clone https://github.com/strml/react-router-page-transition.git
     % npm install
     % npm run develop
     % open index.html

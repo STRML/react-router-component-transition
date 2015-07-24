@@ -1,6 +1,6 @@
 {
-  "name": "react-router-page-transition",
-  "version": "0.0.1",
+  "name": "react-router-component-transition",
+  "version": "0.1.0",
   "description": "Demo and component for React + React Router component + page transitions",
   "main": "index.js",
   "devDependencies": {
@@ -21,14 +21,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/andreypop/react-router-page-transition"
+    "url": "git://github.com/strml/react-router-component-transition"
   },
   "author": "Andrey Popp <8mayday@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/andreypop/react-router-page-transition/issues"
+    "url": "https://github.com/strml/react-router-component-transition/issues"
   },
-  "homepage": "https://github.com/andreypop/react-router-page-transition",
+  "homepage": "https://github.com/strml/react-router-component-transition",
   "dependencies": {
     "object.assign": "^3.0.1"
   }
