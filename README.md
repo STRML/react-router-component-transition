@@ -3,7 +3,7 @@
 A simple component that overrides `<Locations>` in [React-Router-Component](https://github.com/STRML/react-router-component)
 to animate page transitions.
 
-[View the Demo](https://strml.github.io/react-router-page-transition/)
+[View the Demo](https://strml.github.io/react-router-component-transition/)
 
 #### Install
 
