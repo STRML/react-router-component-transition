@@ -4,15 +4,16 @@
   "description": "Demo and component for React + React Router component + page transitions",
   "main": "index.js",
   "devDependencies": {
-    "browserify": "~10.2.4",
+    "browserify": "~12.0.1",
     "envify": "~3.4.0",
     "reactify": "~1.1.1",
-    "uglify-js": "~2.4.10",
-    "watchify": "~3.2.3"
+    "uglify-js": "~2.5.0",
+    "watchify": "~3.6.0"
   },
   "peerDependencies": {
-    "react-router-component": ">0.20 < 0.26",
-    "react": ">=0.12.0 <0.14.0"
+    "react-router-component": ">=0.27",
+    "react": "^0.14.0",
+    "react-addons-css-transition-group": "^0.14.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -30,6 +31,6 @@
   },
   "homepage": "https://github.com/strml/react-router-component-transition",
   "dependencies": {
-    "object.assign": "^3.0.1"
+    "object.assign": "^4.0.3"
   }
 }

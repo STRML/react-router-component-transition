@@ -1,12 +1,12 @@
 'use strict';
-var React              = require('react/addons');
-var CSSTransitionGroup = React.addons.CSSTransitionGroup;
+var React              = require('react');
+var CSSTransitionGroup = require('react-addons-css-transition-group');
 var Router             = require('react-router-component');
 var assign             = require('object.assign');
 
 var AnimatedLocations = React.createClass({
 
-    mixins: [Router.RouterMixin, Router.AsyncRouteRenderingMixin],
+    mixins: [Router.RouterMixin, Router.RouteRenderingMixin],
 
     propTypes: {
       component: React.PropTypes.node,
